@@ -1,6 +1,5 @@
 import emailjs from "emailjs-com";
 import React from 'react';
-//import { Button, Form, FormGroup, Input, Container, Row, Col } from 'reactstrap';
 import './login.css';
 const LoginForm = (props) => {
 
