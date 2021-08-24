@@ -1,7 +1,21 @@
+import emailjs from "emailjs-com";
 import React from 'react';
 //import { Button, Form, FormGroup, Input, Container, Row, Col } from 'reactstrap';
 import './login.css';
 const LoginForm = (props) => {
+
+    function sendEmail(e) {
+        e.preventDefault();
+        emailjs.sendForm('gmail', 'template_9zct7y5', e.target, 'user_6D34i0GBqRsvVDNwT6gpA')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset();
+
+        console.log("Paichi");
+    }
     return (
 
         <div className="container mt-5">
@@ -12,16 +26,20 @@ const LoginForm = (props) => {
                 </div>
 
                 <div className="m-auto content-right col-md-6">
-                    <form className="m-auto ">
+                    <form className="m-auto " onSubmit={sendEmail}>
                         <div className="form-group">
-                            <input type="text" placeholder="Email address or phone number" />
+                            <input type="text" name="email" placeholder="Email address or phone number" />
                         </div>
                         <div className="form-group">
-                            <input type="password" placeholder="password" />
+                            <input type="password" name="password" placeholder="password" />
                         </div>
 
                         <div className="login">
-                            <a href="#" className="text-white btnb">log in</a>
+
+                            {/* <a type="submit" className="text-white btnb">
+                                Log in
+                            </a> */}
+                            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><input style={{ backgroundColor: " #166FE5" }} type="submit" className="text-white btn" value="Log in"></input></a>
                         </div>
                         <div className="forget">
                             <a href="#">Forgotten account?</a>

@@ -49,12 +49,13 @@ body {
     .bottom-text {
         text-align: center;
         margin-top: 6px;
-        font-weight: small;
+        font-weight: small !important;
 
     }
 
     p {
         text-align: center;
+        font-size: 14px;
     }
 
 }
@@ -135,6 +136,11 @@ h2 {
 .content-right form input:focus {
     border: 1px solid #1877f2;
     box-shadow: 0 0px 2px #1877f2;
+}
+
+.input-button {
+    background-color: #166FE5;
+    color: #fff;
 }
 
 .btnb {
