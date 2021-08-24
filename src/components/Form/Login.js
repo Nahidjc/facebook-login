@@ -18,8 +18,8 @@ const LoginForm = (props) => {
     return (
 
         <div className="container mt-5">
-            <div className="m-auto row justify-content-between">
-                <div className="content-h1 col-md-6">
+            <div className="m-auto row ">
+                <div className="m-auto content-h1 col-md-6">
                     <h1>facebook</h1>
                     <h2>Facebook helps you connect and share with the people in your life.</h2>
                 </div>
